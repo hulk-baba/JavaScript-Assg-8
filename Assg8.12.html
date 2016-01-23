@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="popitup()">Click me</button>
+   <script>
+       function popitup(url) {
+	            
+		var str = prompt("Enter a String");
+		var ch = prompt("Enter the character you want to replace");
+		var ch2 = prompt("Enter the character Yount want the one to replace with");
+		newstr = str.replace(ch,ch2);
+		alert(newstr);
+       }
+    </script>
+    
+</body>
+</html>

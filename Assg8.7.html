@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<script src = "myscript.js"></script>
+</head>
+<body>
+   <form name="form1" onsubmit = "return validateForm()" method = "post">
+    <p class="question">1. Who is the President of USA</p>
+    <ul class="answers">
+    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Saddam hossain</label><br/>
+    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Barack Osama</label><br/>
+    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Barack Obama</label><br/>
+    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Michelle Obama</label><br/>
+    </ul><input type = "submit" value = "Submit">
+    </form>
+	<form name = "form2" onsubmit = "return validateForm" method = "post">
+    <p class="question">2. What is the composition of potato?</p>
+    <ul class="answers">
+    <input type="radio" name="q2" value="a" id="q1a"><label for="q1a">Starch</label><br/>
+    <input type="radio" name="q2" value="b" id="q1b"><label for="q1b">Carbohydrate</label><br/>
+    <input type="radio" name="q2" value="c" id="q1c"><label for="q1c">Calcium</label><br/>
+    <input type="radio" name="q2" value="d" id="q1d"><label for="q1d">Silicon</label><br/>
+	</ul><input type="submit" value = "Submit">
+    </form>
+	<form name="form3" onsubmit = "return validateForm" method = "post">
+    <p class="question">3. Who founded Dell Computers?</p>
+	<ul class="answers">
+	<input type="radio" name="q3" value="a" id="q1a"><label for="q1a">Michael Dell</label><br/>
+	<input type="radio" name="q3" value="b" id="q1b"><label for="q1b">Xi Zinping</label><br/>
+	<input type="radio" name="q3" value="c" id="q1c"><label for="q1c">Jack Ma</label><br/>
+	<input type="radio" name="q3" value="d" id="q1d"><label for="q1d">Atul Kumar Gupta</label><br/>
+	</ul><input type ="submit" value = "Submit">
+	</form>
+
+<script>
+    function validateForm(){
+        
+		var score = 0;
+        var ans1  = document.forms["form1"]["q1"].value;
+		var ans2 = document.forms["form2"]["q2"].value;
+		var ans3 = document.forms["form3"]["q3"].value;
+        if(ans1 =="c"){
+            
+			score++;
+            alert("Correct answer");
+        }
+		if(ans2 == "a"){
+		    
+			score++;
+			alert("correct answer");
+		   
+		}
+		if(ans3=="a"){
+		    
+			score++;
+			alert("Correct answer");
+		   
+		}
+		alert("Your Score is : ", score);
+   }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+  <button onclick="popitup()">Click me</button>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+   <script>
+       function popitup() {
+	   
+	   var x = Math.floor((Math.random() * 10) + 1);
+	   document.getElementById("demo").innerHTML = x;
+	   var y = Math.floor((Math.random() * 10) + 1);
+	   document.getElementById("demo2").innerHTML = y;
+	   var sum;
+	    sum =prompt("Enter your answer");
+		if(sum == x+y){
+		   
+		  alert("Correct Answer");
+		}
+		else
+		  alert("Wrong Answer");
+	
+       }
+
+    </script>
+    
+</body>
+</html>

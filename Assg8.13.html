@@ -1,0 +1,101 @@
+   <html>
+ <head>
+<style>
+  .labelClass{
+    float: left;
+    width: 683px;
+  }
+  #Menu
+  {
+  margin-left: 683px;
+  }
+</style>
+
+<script>
+function validateForm(){
+
+var x = document.forms["myForm"]["fname"].value;
+var y = document.forms["myForm"]["lname"].value; 
+var z = document.forms["myForm"]["gender"].value;
+var w = document.forms["myForm"]["hobbies"].value;
+if(x== null || x == "")
+{
+ alert("First Name must be filled Out");
+
+}
+if(y == null || y == "")
+{
+ alert("Last Name must be filled Out");
+
+}
+if(z.checked == false)
+{
+ alert("Gender Box Should be checked");
+
+}
+
+if(w.checked == false)
+{
+ alert("Hobbies must be filled Out");
+
+}
+
+
+
+
+}
+</script>
+</head>
+<body>
+<h1>DATA FORM</h1>
+<form name = "myForm" action="Formsubmission.php" onsubmit="return validateForm()" method="post" >
+  <span class="labelClass">First name: </span><input type="text" name="fname"><br>
+  <p></p>
+  <span class="labelClass">Last name: </span><input type="text" name="lname"><br>
+  <p></p>
+  <span class="labelClass">Gender: </span><input type="radio" name="gender" value="male" checked>Male
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="other">Other<br>
+  <p></p>
+  <span class="labelClass">Hobbies: </span><input type="checkbox" name="hobbies" value="Music">Music
+  <input type="checkbox" name="hobbies" value="Sports">Sports
+  <input type="checkbox" name="hobbies" value="Reading">Reading
+  <input type="checkbox" name="hobbies" value="Writing">Writing
+  <br>
+  <p></p>
+ State: 
+  <div id="Menu">
+<select name="mydropdown">
+<option value="Milk">Gujarat</option>
+<option value="Cheese">Uttar Pradesh</option>
+<option value="Bread">Rajasthan</option>
+<option value="Bread">Maharashtra</option>
+<option value="Bread">Kerala</option>
+<option value="Bread">Bihar</option>
+</select>
+</div>
+<p></p>
+ <span class="labelClass">Pincode </span><input type="text" name="Pincode"><br>
+  <p></p>
+  <span class="labelClass">Photo </span><input type=file name=Browse><br>
+  <p></p>
+  Languages Known:
+  <div id="Menu" >
+  <select size="4">
+<option value="Languages">Hindi</option>
+<option value="Languages">Gujarati</option>
+<option value="Languages">Marathi</option>
+<option value="Languages">Sanskrit</option>
+<option value="Languages">English</option>
+<option value="Languages">Malyalam</option>
+</select>
+  </div>
+ <p></p>
+  <button type="submit" value="Submit">Submit</button>
+  <button type="reset" value="Reset">Reset</button>
+  
+</form>
+</body>
+</html>
+ 
+  

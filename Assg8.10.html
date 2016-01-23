@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <h1 align="center" > Quiz - Time Limit is 30 sec</h1>
+  <h3 id="time" align="right"> </h3>
+  <button onclick="popitup()">Click me</button>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+   <script>
+       function popitup() {
+	   
+	   var x = Math.floor((Math.random() * 10) + 1);
+	   document.getElementById("demo").innerHTML = x;
+	   var y = Math.floor((Math.random() * 10) + 1);
+	   document.getElementById("demo2").innerHTML = y;
+	   var sum;
+	    sum =prompt("Enter your answer");
+		if(sum == x+y){
+		   
+		  alert("Correct Answer");
+		}
+		else
+		  alert("Wrong Answer");
+	
+       }
+	   var total_sec = 30;
+			setTimeout("CheckTime()",1000);	
+			function CheckTime(){
+					document.getElementById("time").innerHTML = 'Time Left ' + total_sec;
+			if(total_sec<=0){
+					Time_out();
+					Score();
+				}
+				else{
+					total_sec = total_sec-1;
+					setTimeout("CheckTime()",1000);
+				}
+			}	
+			
+			function Time_out(){
+				
+				document.write(" <h1>Time Is Up  </h1>");
+				
+			}
+    </script>
+    
+</body>
+</html>
